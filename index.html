@@ -1,393 +1,179 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
-    <title>Arif Budiman</title>
-    
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive Resume Template">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-    <link rel="shortcut icon" href="favicon.png">
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-    
-    <!-- FontAwesome JS-->
-    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
-       
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css">
+    <title>Portfolio - Arif Budiman</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">Arif Budiman</div>
+            <div class="nav-links">
+                <a data-section="home" class="active">Home</a>
+                <a data-section="about">About</a>
+                <a data-section="projects">Projects</a>
+                <a data-section="skills">Skills</a>
+            </div>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+
+        <main id="main-content">
+            <!-- Home Section -->
+            <section id="home" class="content-section active">
+                <div class="hologram-container">
+                    <div class="hero-content">
+                        <h1>Hi, I'm Arif Budiman</h1>
+                        <h2>I'M A
+                            <span class="typewriter-text"></span>
+                        </h2>
+                        <p>Have a brilliant idea? I'm here to make it happen. I am a freelance web developer ready to help you build a professional and distinguished digital presence.</p>
+                        <a href="https://www.linkedin.com/in/arifcom" target="_blank" class="btn">Hire me</a>
+                        <div class="social-links">
+                            <a href="mailto:arif.56.budiman@gmail.com?subject=Tawaran%20Proyek%20Web%20(dari%20Portofolio)&body=Halo%20Arif,%0A%0ASaya%20melihat%20portofolio%20Anda%20dan%20tertarik%20untuk%20bekerja%20sama.%0A%0Berikut%20adalah%20detail%20singkat%20mengenai%20kebutuhan%20saya:%0A%0A%E2%80%A2%20**Jenis%20Proyek:**%20[Contoh:%20Website%20Perusahaan,%20Toko%20Online,%20Landing%20Page]%0A%E2%80%A2%20**Detail%20Singkat:**%20[Jelaskan%20sedikit%20tentang%20proyek%20Anda]%0A%E2%80%A2%20**Kontak%20Saya:**%20[Nomor%20WA/Telepon%20jika%20perlu]%0A%0ATerima%20kasih." target="_blank"><i class="far fa-envelope"></i></a>
+                            <a href="https://www.linkedin.com/in/arifcom" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/Arifcom" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="profile-image">
+                        <div class="profile-circle">
+                            <img src="arif.jpg" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="content-section">
+                <div class="hologram-container">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h3>Early Years</h3>
+                            <p>Started coding at age 12, building simple games and websites.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Education</h3>
+                            <p>Computer Science degree with focus on AI and Machine Learning.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Present</h3>
+                            <p>Leading development teams and creating impactful solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="content-section">
+                <div class="hologram-container">
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <h3>AI Image Generator</h3>
+                            <p>A deep learning model that generates artistic images from text descriptions.</p>
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>TensorFlow</span>
+                                <span>React</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <h3>Smart Home System</h3>
+                            <p>IoT-based home automation system with voice control and energy monitoring.</p>
+                            <div class="tech-stack">
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>React Native</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <h3>Blockchain Wallet</h3>
+                            <p>Secure cryptocurrency wallet with multi-signature support.</p>
+                            <div class="tech-stack">
+                                <span>Solidity</span>
+                                <span>Web3.js</span>
+                                <span>Vue.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
-</head> 
+            <!-- Skills Section -->
+            <section id="skills" class="content-section">
+                <div class="hologram-container">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Frontend</h3>
+                            <ul class="skill-list">
+                                <li>
+                                    HTML/CSS
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 95%;"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    JavaScript
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 90%;"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    React
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 85%;"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Backend</h3>
+                            <ul class="skill-list">
+                                <li>
+                                    Node.js
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 88%;"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    Python
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 92%;"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    Database
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 87%;"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-<body>	
+            <!-- Content Section -->
+            <section id="content" class="content-section">
+                <div class="hologram-container">
+                    <div class="content-grid">
+                        <h2>Latest Blog Posts</h2>
+                        <!-- Add your blog posts or other content here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 
-    <article class="resume-wrapper text-center position-relative">
-	    <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
-		    <header class="resume-header pt-4 pt-md-0">
-			    <div class="media flex-column flex-md-row">
-				    <img class="mr-3 img-fluid picture mx-auto" src="assets/images/profile.png" alt="">
-				    <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
-					    <div class="primary-info">
-						    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Arif Budiman</h1>
-						    <div class="title mb-3">Programmer</div>
-						    <ul class="list-unstyled">
-							    <li class="mb-2"><a href="#"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>arif.56.budiman@gmail.com</a></li>
-							    <li><a href="#"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>+6281364217974</a></li>
-						    </ul>
-					    </div><!--//primary-info-->
-					    <div class="secondary-info ml-md-auto mt-2">
-						    <ul class="resume-social list-unstyled">
-								<li class="mb-3"><a href="https://codepen.io/arifcom" target="_blank"><span class="fa-container text-center mr-2"><i class="fab fa-codepen fa-fw"></i></span>codepen.io/arifcom</a></li>
-				                <li class="mb-3"><a href="https://github.com/arifcom" target="_blank"><span class="fa-container text-center mr-2"><i class="fab fa-github-alt fa-fw"></i></span>github.com/arifcom</a></li>
-								<li class="mb-3"><a href="https://www.linkedin.com/in/arifcom" target="_blank"><span class="fa-container text-center mr-2"><i class="fab fa-linkedin-in fa-fw"></i></span>linkedin.com/in/arifcom</a></li>
-								<li><a href="https://stackoverflow.com/story/arifcom" target="_blank"><span class="fa-container text-center mr-2"><i class="fab fa-stack-overflow fa-fw"></i></span>stackoverflow.com/story/arifcom</a></li>
-						    </ul>
-					    </div><!--//secondary-info-->
-					    
-				    </div><!--//media-body-->
-			    </div><!--//media-->
-		    </header>
-		    <div class="resume-body p-5">
-			    <section class="resume-section summary-section mb-5">
-				    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Career Summary</h2>
-				    <div class="resume-section-content">
-					    <p class="mb-0 text-justify">For 4 years studying programming during college in the informatics engineering department of the science and technology faculty. During college, programming and public speaking skills are trained in experience as teaching assistants for basic programming, algorithms and programming, data structures. Work experience was first gained when carrying out practical work in the department of informatics engineering. After lecturing, the skills that have been honed have been implemented in a software house called Garuda Cyber Indonesia and a start up engaged in printing called Bestprint.</p>
-				    </div>
-			    </section><!--//summary-section-->
-			    <div class="row">
-				    <div class="col-lg-9">
-					    <section class="resume-section experience-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience</h2>
-						    <div class="resume-section-content">
-							    <div class="resume-timeline position-relative">
-									<article class="resume-timeline-item position-relative pb-5">
-
-										<div class="resume-timeline-item-header mb-2">
-											<div class="d-flex flex-column flex-md-row">
-												<h3 class="resume-position-title font-weight-bold mb-1">Assistant Lecturer</h3>
-												<div class="resume-company-name ml-auto">IE UIN SUSKA Riau</div>
-											</div><!--//row-->
-											<div class="resume-position-time">2015</div>
-										</div><!--//resume-timeline-item-header-->
-										<div class="resume-timeline-item-desc">
-											<p class="text-justify">Worked as an assistant lecturer in basic programming courses in the department of informatics engineering, faculty of science and technology, UIN SUSKA Riau.</p>
-											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Courses:</h4>
-											<p>Subjects taught include:</p>
-											<ul>
-												<li>Basic Java Programming</li>
-											</ul>
-											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-											<ul class="list-inline">
-												<li class="list-inline-item"><span class="badge badge-primary badge-pill">Java</span></li>
-											</ul>
-										</div><!--//resume-timeline-item-desc-->
-
-									</article><!--//resume-timeline-item-->
-									<article class="resume-timeline-item position-relative pb-5">
-
-										<div class="resume-timeline-item-header mb-2">
-											<div class="d-flex flex-column flex-md-row">
-												<h3 class="resume-position-title font-weight-bold mb-1">Assistant Lecturer</h3>
-												<div class="resume-company-name ml-auto">IE UIN SUSKA Riau</div>
-											</div><!--//row-->
-											<div class="resume-position-time">2015</div>
-										</div><!--//resume-timeline-item-header-->
-										<div class="resume-timeline-item-desc">
-											<p class="text-justify">Worked as an assistant lecturer in algorithm programming courses in the department of informatics engineering, faculty of science and technology, UIN SUSKA Riau.</p>
-											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Courses:</h4>
-											<p>Subjects taught include:</p>
-											<ul>
-												<li>Algorithm Java Programming</li>
-											</ul>
-											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-											<ul class="list-inline">
-												<li class="list-inline-item"><span class="badge badge-primary badge-pill">Java</span></li>
-											</ul>
-										</div><!--//resume-timeline-item-desc-->
-
-									</article><!--//resume-timeline-item-->
-									<article class="resume-timeline-item position-relative pb-5">
-
-										<div class="resume-timeline-item-header mb-2">
-											<div class="d-flex flex-column flex-md-row">
-												<h3 class="resume-position-title font-weight-bold mb-1">Assistant Lecturer</h3>
-												<div class="resume-company-name ml-auto">IE UIN SUSKA Riau</div>
-											</div><!--//row-->
-											<div class="resume-position-time">2016</div>
-										</div><!--//resume-timeline-item-header-->
-										<div class="resume-timeline-item-desc">
-											<p class="text-justify">Worked as an assistant lecturer in data structure programming courses in the department of informatics engineering, faculty of science and technology, UIN SUSKA Riau.</p>
-											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Courses:</h4>
-											<p>Subjects taught include:</p>
-											<ul>
-												<li>Data Structure Java Programming</li>
-											</ul>
-											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-											<ul class="list-inline">
-												<li class="list-inline-item"><span class="badge badge-primary badge-pill">Java</span></li>
-											</ul>
-										</div><!--//resume-timeline-item-desc-->
-
-									</article><!--//resume-timeline-item-->
-									<article class="resume-timeline-item position-relative pb-5">
-
-										<div class="resume-timeline-item-header mb-2">
-											<div class="d-flex flex-column flex-md-row">
-												<h3 class="resume-position-title font-weight-bold mb-1">Website Developer</h3>
-												<div class="resume-company-name ml-auto">Best Total Solution</div>
-											</div><!--//row-->
-											<div class="resume-position-time">2019</div>
-										</div><!--//resume-timeline-item-header-->
-										<div class="resume-timeline-item-desc">
-											<p class="text-justify">Works as a website developer on the Best Total Solution application development team that has the responsibility to build and maintain website based programs.</p>
-											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Product:</h4>
-											<p>Some of the products that are built and maintained include:</p>
-											<ul>
-												<li>Website Bestprint</li>
-											</ul>
-											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-											<ul class="list-inline">
-												<li class="list-inline-item"><span class="badge badge-primary badge-pill">Codeigniter</span></li>
-											</ul>
-										</div><!--//resume-timeline-item-desc-->
-
-									</article><!--//resume-timeline-item-->
-								    <article class="resume-timeline-item position-relative">
-									    
-									    <div class="resume-timeline-item-header mb-2">
-										    <div class="d-flex flex-column flex-md-row">
-										        <h3 class="resume-position-title font-weight-bold mb-1">Programmer</h3>
-										        <div class="resume-company-name ml-auto">Garuda Cyber Indonesia</div>
-										    </div><!--//row-->
-										    <div class="resume-position-time">2019</div>
-									    </div><!--//resume-timeline-item-header-->
-									    <div class="resume-timeline-item-desc">
-										    <p class="text-justify">Works as a programmer in the smart campus division of the Garuda Cyber Indonesia company which has the responsibility to build and maintain mobile and website based programs.</p>
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Product:</h4>
-										    <p>Some of the products that are built and maintained include:</p>
-										    <ul>
-											    <li>Profile Website STIE Riau</li>
-											    <li>Profile Website STIFAR</li>
-											    <li>Smart Campus STIE Riau</li>
-											    <li>Smart Campus STITM Berau Kalimantan Timur</li>
-											    <li>Statistic Flight and Departure System Angkasa Pura 2</li>
-												<li>Website Lancang Kuning</li>
-										    </ul>
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-										    <ul class="list-inline">
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">Codeigniter</span></li>
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">Laravel</span></li>
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">YII</span></li>
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">Flutter</span></li>
-										    </ul>
-									    </div><!--//resume-timeline-item-desc-->
-
-								    </article><!--//resume-timeline-item-->
-									<article class="resume-timeline-item position-relative">
-									    
-									    <div class="resume-timeline-item-header mb-2">
-										    <div class="d-flex flex-column flex-md-row">
-										        <h3 class="resume-position-title font-weight-bold mb-1">Junior Web Developer</h3>
-										        <div class="resume-company-name ml-auto">Matrixc</div>
-										    </div><!--//row-->
-										    <div class="resume-position-time">2019</div>
-									    </div><!--//resume-timeline-item-header-->
-									    <div class="resume-timeline-item-desc">
-										    <p class="text-justify">Works as a web developer in Matrixc company which has the responsibility to build and maintain website based programs.</p>
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Product:</h4>
-										    <p>Some of the products that are built and maintained include:</p>
-										    <ul>
-											    <li>Ruang Ilmu</li>
-											    <li>RECQA</li>
-										    </ul>
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-										    <ul class="list-inline">
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">Angular JS</span></li>
-											    <li class="list-inline-item"><span class="badge badge-primary badge-pill">Nest JS</span></li>
-										    </ul>
-									    </div><!--//resume-timeline-item-desc-->
-
-								    </article><!--//resume-timeline-item-->
-							    </div><!--//resume-timeline-->
-							    
-							    
-							    
-							    
-							    
-							    
-						    </div>
-					    </section><!--//experience-section-->
-				    </div>
-				    <div class="col-lg-3">
-					    <section class="resume-section skills-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills &amp; Tools</h2>
-						    <div class="resume-section-content">
-						        <div class="resume-skill-item">
-							        <h4 class="resume-skills-cat font-weight-bold">Frontend</h4>
-							        <ul class="list-unstyled mb-4">
-										<li class="mb-2">
-											<div class="resume-skill-name">Electron</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-										<li class="mb-2">
-											<div class="resume-skill-name">Flutter</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-										<li class="mb-2">
-											<div class="resume-skill-name">JQuery</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">React</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">Vue</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-							        </ul>
-						        </div><!--//resume-skill-item-->
-						        
-						        <div class="resume-skill-item">
-						            <h4 class="resume-skills-cat font-weight-bold">Backend</h4>
-							        <ul class="list-unstyled">
-										<li class="mb-2">
-											<div class="resume-skill-name">Codeigniter</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">Laravel</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-										<li class="mb-2">
-											<div class="resume-skill-name">Lumen</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-										<li class="mb-2">
-											<div class="resume-skill-name">Symfony</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-										<li class="mb-2">
-											<div class="resume-skill-name">YII</div>
-											<div class="progress resume-progress">
-												<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</li>
-							        </ul>
-						        </div><!--//resume-skill-item-->
-						        
-						        <div class="resume-skill-item">
-						            <h4 class="resume-skills-cat font-weight-bold">Others</h4>
-						            <ul class="list-inline">
-										<li class="list-inline-item"><span class="badge badge-light">Android Studio</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">PhpStorm</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">WebStorm</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">DataGrip</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Adobe Illustrator</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Adobe Photoshop</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">cPanel</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Blogger</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">WordPress</span></li>
-						            </ul>
-						        </div><!--//resume-skill-item-->
-						    </div><!--resume-section-content-->
-					    </section><!--//skills-section-->
-					    <section class="resume-section education-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
-						    <div class="resume-section-content">
-							    <ul class="list-unstyled">
-								    <li class="mb-2">
-								        <div class="resume-degree font-weight-bold">Mathematics and Science</div>
-								        <div class="resume-degree-org">SMA Muhammadiyah 1 Pekanbaru</div>
-								        <div class="resume-degree-time">2011 - 2014</div>
-								    </li>
-								    <li>
-								        <div class="resume-degree font-weight-bold">Informatics Engineering</div>
-								        <div class="resume-degree-org">UIN SUSKA Riau</div>
-								        <div class="resume-degree-time">2014 - 2019</div>
-								    </li>
-							    </ul>
-						    </div>
-					    </section><!--//education-section-->
-					    <section class="resume-section reference-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Awards</h2>
-						    <div class="resume-section-content">
-							    <ul class="list-unstyled resume-awards-list">
-									<li class="mb-0 pl-4 position-relative">
-										<i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
-										<div class="resume-award-name">Certificate of Completion</div>
-										<div class="resume-award-desc">I has successfully completed the requerements to be recognized as Android Developer Expert Dicoding.</div>
-									</li>
-									<li class="mb-0 pl-4 position-relative">
-										<i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
-										<div class="resume-award-name">Certificate of Completion</div>
-										<div class="resume-award-desc">I has successfully completed the requerements to be recognized as Flutter Developer Expert Dicoding.</div>
-									</li>
-								    <li class="mb-2 pl-4 position-relative">
-								        <i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
-								        <div class="resume-award-name">Certificate of Completion</div>
-								        <div class="resume-award-desc">I has successfully completed the requerements to be recognized as MTA for Software Development Fundamental.</div>
-								    </li>
-							    </ul>
-						    </div>
-					    </section><!--//interests-section-->
-					    <section class="resume-section language-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Language</h2>
-						    <div class="resume-section-content">
-							    <ul class="list-unstyled resume-lang-list">
-								    <li class="mb-2"><span class="resume-lang-name font-weight-bold">Indonesia</span> <small class="text-muted font-weight-normal">(Native)</small></li>
-								    <li class="mb-2 align-middle"><span class="resume-lang-name font-weight-bold">English</span> <small class="text-muted font-weight-normal">(Professional)</small></li>
-							    </ul>
-						    </div>
-					    </section><!--//language-section-->
-					    <section class="resume-section interests-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Interests</h2>
-						    <div class="resume-section-content">
-							    <ul class="list-unstyled">
-								    <li class="mb-1">Gaming</li>
-								    <li class="mb-1">Programming</li>
-							    </ul>
-						    </div>
-					    </section><!--//interests-section-->
-					    
-				    </div>
-			    </div><!--//row-->
-		    </div><!--//resume-body-->
-		    
-		    
-	    </div>
-    </article>  
-
-    
-    <footer class="footer text-center pt-2 pb-5">
-	     <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-<!--                <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>-->
-    </footer>
-
-    
-
+    <script src="script.js"></script>
 </body>
-</html> 
 
+</html>
