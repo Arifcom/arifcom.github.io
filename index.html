@@ -1,182 +1,388 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Arif Budiman</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Arif Budiman | Web Profile</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FACC15', // Yellow-400
+                        dark: '#171717', // Neutral-900
+                        darker: '#0A0A0A', // Neutral-950
+                        card: '#262626', // Neutral-800
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #171717;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #404040;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FACC15;
+        }
+
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            color: transparent;
+        }
+    </style>
 </head>
 
-<body>
-    <div class="container">
-        <nav>
-            <div class="logo">Arif Budiman</div>
-            <div class="nav-links">
-                <!-- <a data-section="home" class="active">Home</a>
-                <a data-section="about">About</a>
-                <a data-section="projects">Projects</a>
-                <a data-section="skills">Skills</a>
-                <a href="#">About</a>
-                <a href="#">Projects</a>
-                <a href="#">Skills</a> -->
+<body class="bg-darker text-gray-300 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-darker/80 backdrop-blur-md border-b border-white/5 transition-all duration-300"
+        id="navbar">
+        <div class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-display font-bold text-white tracking-tight">Arif<span
+                    class="text-primary">.</span></a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
             </div>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden" id="home">
+        <!-- Background Elements -->
+        <div class="absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        <div class="absolute bottom-20 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl -z-10"></div>
+
+        <div
+            class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl flex flex-col-reverse md:flex-row items-center gap-12">
+            <div class="flex-1 text-center md:text-left" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-primary font-medium tracking-wide mb-4">HELLO, I'M</h2>
+                <h1 class="text-5xl md:text-7xl font-display font-bold text-white leading-tight mb-6">
+                    Arif <br> <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-200">Budiman</span>
+                </h1>
+                <p class="text-xl text-gray-400 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    A Developer with a Designer's eye. Building web applications that not only function well, but also
+                    look great.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contact"
+                        class="px-8 py-3 bg-primary text-darker font-bold rounded-full hover:bg-yellow-300 transition-transform transform hover:scale-105 shadow-lg shadow-yellow-500/20">
+                        Get in Touch
+                    </a>
+                    <a href="#experience"
+                        class="px-8 py-3 border border-gray-600 text-white rounded-full hover:border-primary hover:text-primary transition-colors">
+                        View Work
+                    </a>
+                </div>
             </div>
-        </nav>
-
-        <main id="main-content">
-            <!-- Home Section -->
-            <section id="home" class="content-section active">
-                <div class="hologram-container">
-                    <div class="hero-content">
-                        <h1>Hi, I'm Arif Budiman</h1>
-                        <h2>I'M A
-                            <span class="typewriter-text"></span>
-                        </h2>
-                        <p>Have a brilliant idea? I'm here to make it happen. I am a freelance web developer ready to help you build a professional and distinguished digital presence.</p>
-                        <a href="https://www.linkedin.com/in/arifcom" target="_blank" class="btn">Hire me</a>
-                        <div class="social-links">
-                            <a href="mailto:arif.56.budiman@gmail.com?subject=Tawaran%20Proyek%20Web%20(dari%20Portofolio)&body=Halo%20Arif,%0A%0ASaya%20melihat%20portofolio%20Anda%20dan%20tertarik%20untuk%20bekerja%20sama.%0A%0Berikut%20adalah%20detail%20singkat%20mengenai%20kebutuhan%20saya:%0A%0A%E2%80%A2%20**Jenis%20Proyek:**%20[Contoh:%20Website%20Perusahaan,%20Toko%20Online,%20Landing%20Page]%0A%E2%80%A2%20**Detail%20Singkat:**%20[Jelaskan%20sedikit%20tentang%20proyek%20Anda]%0A%E2%80%A2%20**Kontak%20Saya:**%20[Nomor%20WA/Telepon%20jika%20perlu]%0A%0ATerima%20kasih." target="_blank"><i class="far fa-envelope"></i></a>
-                            <a href="https://www.linkedin.com/in/arifcom" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/Arifcom" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
+            <div class="flex-1 flex justify-center md:justify-end relative" data-aos="fade-left"
+                data-aos-duration="1200">
+                <div class="relative w-72 h-72 md:w-96 md:h-96">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-primary to-transparent rounded-[2rem] rotate-6 opacity-30">
                     </div>
+                    <div class="absolute inset-0 border-2 border-white/10 rounded-[2rem] -rotate-6"></div>
+                    <img src="assets/profile.jpg" alt="Arif Budiman"
+                        class="w-full h-full object-cover object-[50%_15%] rounded-[2rem] shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="profile-image">
-                        <div class="profile-circle">
-                            <img src="arif.jpg" alt="Profile">
-                        </div>
+    <!-- Experience Section -->
+    <section class="py-20 bg-dark" id="experience">
+        <div class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl">
+            <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-16 text-center" data-aos="fade-up">
+                Professional <span class="text-primary">Experience</span></h2>
+
+            <div class="relative border-l border-gray-700 ml-4 md:ml-1/2 space-y-12">
+
+                <!-- Job 1 -->
+                <div class="relative md:flex items-center justify-between group" data-aos="fade-up">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-darker"></div>
+                    <div class="md:w-1/2 pl-8 md:pl-0 md:pr-12 md:text-right">
+                        <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Information
+                            Technology</h3>
+                        <p class="text-gray-400 mt-1">Badan Kesatuan Bangsa dan Politik Kota Pekanbaru</p>
+                        <!-- Mobile Date -->
+                        <span class="md:hidden block text-sm text-primary mt-2">2025 - Present</span>
+                    </div>
+                    <div class="hidden md:block md:w-1/2 pl-12">
+                        <span
+                            class="inline-block px-4 py-1 bg-card rounded-full text-sm text-primary border border-white/5">2025
+                            - Present</span>
+                        <p class="text-gray-400 mt-4 leading-relaxed text-sm">
+                            Managed the agency's core IT infrastructure, ensuring operational uptime. Provided
+                            comprehensive technical support, resolving hardware, software, and system issues.
+                        </p>
+                    </div>
+                    <!-- Mobile Desc -->
+                    <div class="md:hidden pl-8 mt-4">
+                        <p class="text-gray-400 text-sm">Managed core IT infrastructure and provided technical support.
+                        </p>
                     </div>
                 </div>
 
-            </section>
-
-            <!-- About Section -->
-            <section id="about" class="content-section">
-                <div class="hologram-container">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h3>Early Years</h3>
-                            <p>Started coding at age 12, building simple games and websites.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h3>Education</h3>
-                            <p>Computer Science degree with focus on AI and Machine Learning.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h3>Present</h3>
-                            <p>Leading development teams and creating impactful solutions.</p>
-                        </div>
+                <!-- Job 2 -->
+                <div class="relative md:flex items-center justify-between group" data-aos="fade-up">
+                    <div
+                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-600 group-hover:bg-primary transition-colors ring-4 ring-darker">
                     </div>
-                </div>
-            </section>
 
-            <!-- Projects Section -->
-            <section id="projects" class="content-section">
-                <div class="hologram-container">
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <h3>AI Image Generator</h3>
-                            <p>A deep learning model that generates artistic images from text descriptions.</p>
-                            <div class="tech-stack">
-                                <span>Python</span>
-                                <span>TensorFlow</span>
-                                <span>React</span>
+                    <!-- Desktop: Right side content for timeline alignment need to swap logic for alternating layout if desired, keeping simple left-aligned for now but structured for split -->
+                    <!-- Actually sticking to a simpler left-border timeline for better responsiveness consistency -->
+                </div>
+
+                <!-- Refactored Timeline for Vertical Split Layout Style -->
+                <!-- Item 1 -->
+                <div class="mb-8 ml-6 transform transition-all hover:-translate-y-1" data-aos="fade-up">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-card rounded-full -left-3 ring-4 ring-darker">
+                        <div class="w-2 h-2 bg-primary rounded-full"></div>
+                    </span>
+                    <div
+                        class="p-6 bg-card rounded-2xl border border-white/5 shadow-lg hover:border-primary/30 transition-colors">
+                        <div class="flex flex-col md:flex-row justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Information Technology</h3>
+                                <p class="text-primary text-sm">Badan Kesatuan Bangsa dan Politik Kota Pekanbaru</p>
                             </div>
+                            <span class="text-sm text-gray-500 mt-1 md:mt-0">2025 - Present</span>
                         </div>
-                        <div class="project-card">
-                            <h3>Smart Home System</h3>
-                            <p>IoT-based home automation system with voice control and energy monitoring.</p>
-                            <div class="tech-stack">
-                                <span>Node.js</span>
-                                <span>MongoDB</span>
-                                <span>React Native</span>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Managed the agency's core IT infrastructure, ensuring operational uptime. Provided
+                            comprehensive technical support, resolving all hardware, software, and system issues for
+                            staff.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="mb-8 ml-6 transform transition-all hover:-translate-y-1" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-card rounded-full -left-3 ring-4 ring-darker">
+                        <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+                    </span>
+                    <div
+                        class="p-6 bg-card rounded-2xl border border-white/5 shadow-lg hover:border-primary/30 transition-colors">
+                        <div class="flex flex-col md:flex-row justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Programmer</h3>
+                                <p class="text-primary text-sm">Matrixc</p>
                             </div>
+                            <span class="text-sm text-gray-500 mt-1 md:mt-0">2021 - 2025</span>
                         </div>
-                        <div class="project-card">
-                            <h3>Blockchain Wallet</h3>
-                            <p>Secure cryptocurrency wallet with multi-signature support.</p>
-                            <div class="tech-stack">
-                                <span>Solidity</span>
-                                <span>Web3.js</span>
-                                <span>Vue.js</span>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Spearheaded the full-stack development of "Ruang Ilmu" and "RECQA". Engineered end-to-end
+                            solutions, from robust back-end to user-centric UI/UX.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="mb-8 ml-6 transform transition-all hover:-translate-y-1" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-card rounded-full -left-3 ring-4 ring-darker">
+                        <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+                    </span>
+                    <div
+                        class="p-6 bg-card rounded-2xl border border-white/5 shadow-lg hover:border-primary/30 transition-colors">
+                        <div class="flex flex-col md:flex-row justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Programmer (Best Total Solution)</h3>
+                                <p class="text-primary text-sm">Freelance / Contract</p>
                             </div>
+                            <span class="text-sm text-gray-500 mt-1 md:mt-0">2020 - 2021</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Developed and maintained 'bestprint.id', an e-commerce platform for on-demand online
+                            printing. Engineered the full customer workflow from file upload to payment.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="mb-8 ml-6 transform transition-all hover:-translate-y-1" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-card rounded-full -left-3 ring-4 ring-darker">
+                        <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+                    </span>
+                    <div
+                        class="p-6 bg-card rounded-2xl border border-white/5 shadow-lg hover:border-primary/30 transition-colors">
+                        <div class="flex flex-col md:flex-row justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Programmer</h3>
+                                <p class="text-primary text-sm">Garuda Cyber Indonesia</p>
+                            </div>
+                            <span class="text-sm text-gray-500 mt-1 md:mt-0">2019 - 2020</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Core member of the development team for a 'Smart Campus' web application designed to
+                            digitize university operations.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20 bg-darker relative" id="skills">
+        <!-- Floating shapes -->
+        <div class="absolute top-10 left-10 w-20 h-20 bg-primary/5 rounded-full blur-xl"></div>
+        <div class="absolute bottom-10 right-10 w-32 h-32 bg-primary/5 rounded-full blur-xl"></div>
+
+        <div class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl">
+            <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-16 text-center" data-aos="fade-up">My
+                <span class="text-primary">Skills</span>
+            </h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Skill Card -->
+                <div class="p-6 bg-card rounded-xl border border-white/5 hover:border-primary/50 transition-all duration-300 group text-center"
+                    data-aos="flip-left">
+                    <div
+                        class="w-12 h-12 mx-auto bg-gray-700/50 rounded-lg flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-dark transition-colors mb-4">
+                        🌐
+                    </div>
+                    <h3 class="text-white font-medium">Web Development</h3>
+                </div>
+                <div class="p-6 bg-card rounded-xl border border-white/5 hover:border-primary/50 transition-all duration-300 group text-center"
+                    data-aos="flip-left" data-aos-delay="100">
+                    <div
+                        class="w-12 h-12 mx-auto bg-gray-700/50 rounded-lg flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-dark transition-colors mb-4">
+                        🎨
+                    </div>
+                    <h3 class="text-white font-medium">Figma</h3>
+                </div>
+                <div class="p-6 bg-card rounded-xl border border-white/5 hover:border-primary/50 transition-all duration-300 group text-center"
+                    data-aos="flip-left" data-aos-delay="200">
+                    <div
+                        class="w-12 h-12 mx-auto bg-gray-700/50 rounded-lg flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-dark transition-colors mb-4">
+                        ☁️
+                    </div>
+                    <h3 class="text-white font-medium">Google Cloud</h3>
+                </div>
+                <div class="p-6 bg-card rounded-xl border border-white/5 hover:border-primary/50 transition-all duration-300 group text-center"
+                    data-aos="flip-left" data-aos-delay="300">
+                    <div
+                        class="w-12 h-12 mx-auto bg-gray-700/50 rounded-lg flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-dark transition-colors mb-4">
+                        📜
+                    </div>
+                    <h3 class="text-white font-medium">Certifications</h3>
+                    <p class="text-xs text-gray-500 mt-1">MTA Software Dev</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Contact Footer -->
+    <section class="py-20 bg-dark border-t border-white/5" id="contact">
+        <div class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Education -->
+                <div data-aos="fade-right">
+                    <h2 class="text-2xl font-display font-bold text-white mb-8">Education</h2>
+                    <div class="flex items-start">
+                        <div class="text-primary text-4xl mr-4">🎓</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">UIN SUSKA Riau</h3>
+                            <p class="text-gray-400">Bachelor's degree, Information Technology</p>
+                            <p class="text-sm text-primary mt-1">2014 - 2019</p>
                         </div>
                     </div>
                 </div>
-            </section>
 
+                <!-- Contact -->
+                <div data-aos="fade-left">
+                    <h2 class="text-2xl font-display font-bold text-white mb-8">Contact Me</h2>
+                    <p class="text-gray-400 mb-6">Currently available for freelance projects or full-time opportunities.
+                    </p>
 
-            <!-- Skills Section -->
-            <section id="skills" class="content-section">
-                <div class="hologram-container">
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h3>Frontend</h3>
-                            <ul class="skill-list">
-                                <li>
-                                    HTML/CSS
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 95%;"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    JavaScript
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 90%;"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    React
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 85%;"></div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h3>Backend</h3>
-                            <ul class="skill-list">
-                                <li>
-                                    Node.js
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 88%;"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    Python
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 92%;"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    Database
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 87%;"></div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="space-y-4">
+                        <a href="mailto:arif.56.budiman@gmail.com"
+                            class="flex items-center p-4 bg-card rounded-lg hover:bg-gray-700 transition-colors group">
+                            <div
+                                class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-darker transition-colors mr-4">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span class="text-white">arif.56.budiman@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/arifcom" target="_blank"
+                            class="flex items-center p-4 bg-card rounded-lg hover:bg-gray-700 transition-colors group">
+                            <div
+                                class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-darker transition-colors mr-4">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                            </div>
+                            <span class="text-white">linkedin.com/in/arifcom</span>
+                        </a>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <!-- Content Section -->
-            <section id="content" class="content-section">
-                <div class="hologram-container">
-                    <div class="content-grid">
-                        <h2>Latest Blog Posts</h2>
-                        <!-- Add your blog posts or other content here -->
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
+            <div class="border-t border-white/5 mt-16 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Arif Budiman. Crafted with Tailwind CSS.</p>
+            </div>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+        });
+    </script>
 </body>
 
 </html>
