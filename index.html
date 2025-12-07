@@ -1,525 +1,534 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arif Budiman | Web Profile</title>
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#FACC15', // Yellow-400
-                        dark: '#171717', // Neutral-900
-                        darker: '#0A0A0A', // Neutral-950
-                        card: '#262626', // Neutral-800
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Outfit', 'sans-serif'],
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FACC15", // Yellow-400
+              dark: "#171717", // Neutral-900
+              darker: "#0A0A0A", // Neutral-950
+              card: "#262626", // Neutral-800
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Outfit", "sans-serif"],
+            },
+          },
+        },
+      };
     </script>
     <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style>
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
 
-        ::-webkit-scrollbar-track {
-            background: #171717;
-        }
+      ::-webkit-scrollbar-track {
+        background: #171717;
+      }
 
-        ::-webkit-scrollbar-thumb {
-            background: #404040;
-            border-radius: 4px;
-        }
+      ::-webkit-scrollbar-thumb {
+        background: #404040;
+        border-radius: 4px;
+      }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: #FACC15;
-        }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #facc15;
+      }
 
-        .text-stroke {
-            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
-            color: transparent;
-        }
+      .text-stroke {
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+        color: transparent;
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-darker text-gray-300 font-sans antialiased overflow-x-hidden">
-
+  <body class="bg-darker text-gray-300 font-sans antialiased overflow-x-hidden">
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-darker/80 backdrop-blur-md border-b border-white/5 transition-all duration-300"
-        id="navbar">
-        <div class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-display font-bold text-white tracking-tight">Arif<span
-                    class="text-primary">.</span></a>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
-                <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
-                <a href="#projects" class="hover:text-primary transition-colors">Portfolio</a>
-                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </button>
+    <nav class="fixed w-full z-50 bg-darker/80 backdrop-blur-md border-b border-white/5 transition-all duration-300" id="navbar">
+      <div class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl py-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-display font-bold text-white tracking-tight">Arif<span class="text-primary">.</span></a>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+          <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+          <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+          <a href="#projects" class="hover:text-primary transition-colors">Portfolio</a>
+          <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
         </div>
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden" id="home">
-        <!-- Background Elements -->
-        <div class="absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
-        <div class="absolute bottom-20 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl -z-10"></div>
+      <!-- Background Elements -->
+      <div class="absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
+      <div class="absolute bottom-20 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl -z-10"></div>
 
-        <div
-            class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl flex flex-col-reverse md:flex-row items-center gap-12">
-            <div class="flex-1 text-center md:text-left" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="text-primary font-medium tracking-wide mb-4">HELLO, I'M</h2>
-                <h1 class="text-5xl md:text-7xl font-display font-bold text-white leading-tight mb-6">
-                    Arif <br> <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-200">Budiman</span>
-                </h1>
-                <p class="text-xl text-gray-400 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
-                    A Developer with a Designer's eye. Building web applications that not only function well, but also
-                    look great.
-                </p>
-                <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#contact"
-                        class="px-8 py-3 bg-primary text-darker font-bold rounded-full hover:bg-yellow-300 transition-transform transform hover:scale-105 shadow-lg shadow-yellow-500/20">
-                        Get in Touch
-                    </a>
-                    <a href="#experience"
-                        class="px-8 py-3 border border-gray-600 text-white rounded-full hover:border-primary hover:text-primary transition-colors">
-                        View Work
-                    </a>
-                </div>
-            </div>
-            <div class="flex-1 flex justify-center md:justify-end relative" data-aos="fade-left"
-                data-aos-duration="1200">
-                <div class="relative w-72 h-72 md:w-96 md:h-96">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-tr from-primary to-transparent rounded-[2rem] rotate-6 opacity-30">
-                    </div>
-                    <div class="absolute inset-0 border-2 border-white/10 rounded-[2rem] -rotate-6"></div>
-                    <img src="assets/profile.jpg" alt="Arif Budiman"
-                        class="w-full h-full object-cover object-[50%_15%] rounded-[2rem] shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-500">
-                </div>
-            </div>
+      <div class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl flex flex-col-reverse md:flex-row items-center gap-12">
+        <div class="flex-1 text-center md:text-left" data-aos="fade-up" data-aos-duration="1000">
+          <h2 class="text-primary font-medium tracking-wide mb-4">HELLO, I'M</h2>
+          <h1 class="text-5xl md:text-7xl font-display font-bold text-white leading-tight mb-6">
+            Arif <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-200">Budiman</span>
+          </h1>
+          <p class="text-xl text-gray-400 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
+            A Developer with a Designer's eye. Building web applications that not only function well, but also look great.
+          </p>
+          <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+            <a
+              href="#contact"
+              class="px-8 py-3 bg-primary text-darker font-bold rounded-full hover:bg-yellow-300 transition-transform transform hover:scale-105 shadow-lg shadow-yellow-500/20"
+            >
+              Get in Touch
+            </a>
+            <a href="#experience" class="px-8 py-3 border border-gray-600 text-white rounded-full hover:border-primary hover:text-primary transition-colors">
+              View Work
+            </a>
+          </div>
         </div>
+        <div class="flex-1 flex justify-center md:justify-end relative" data-aos="fade-left" data-aos-duration="1200">
+          <div class="relative w-72 h-72 md:w-96 md:h-96">
+            <div class="absolute inset-0 bg-gradient-to-tr from-primary to-transparent rounded-[2rem] rotate-6 opacity-30"></div>
+            <div class="absolute inset-0 border-2 border-white/10 rounded-[2rem] -rotate-6"></div>
+            <!-- Add class: grayscale hover:grayscale-0 for effect -->
+            <img
+              src="assets/profile-yellow.png"
+              alt="Arif Budiman"
+              class="w-full h-full object-cover object-[50%_15%] rounded-[2rem] shadow-2xl relative z-10 transition-all duration-500"
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Experience Section -->
     <section class="py-20 bg-dark" id="experience">
-        <div class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl">
-            <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-16 text-center" data-aos="fade-up">
-                Professional <span class="text-primary">Experience</span></h2>
+      <div class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-16 text-center" data-aos="fade-up">
+          Professional <span class="text-primary">Experience</span>
+        </h2>
 
-            <div class="relative border-l border-gray-700 ml-4 md:ml-1/2 space-y-12">
-
-                <!-- Job 1 -->
-                <div class="relative md:flex items-center justify-between group" data-aos="fade-up">
-                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-darker"></div>
-                    <div class="md:w-1/2 pl-8 md:pl-0 md:pr-12 md:text-right">
-                        <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Information
-                            Technology</h3>
-                        <p class="text-gray-400 mt-1">Badan Kesatuan Bangsa dan Politik Kota Pekanbaru</p>
-                        <!-- Mobile Date -->
-                        <span class="md:hidden block text-sm text-primary mt-2">2025 - Present</span>
-                    </div>
-                    <div class="hidden md:block md:w-1/2 pl-12">
-                        <span
-                            class="inline-block px-4 py-1 bg-card rounded-full text-sm text-primary border border-white/5">2025
-                            - Present</span>
-                        <p class="text-gray-400 mt-4 leading-relaxed text-sm">
-                            Managed the agency's core IT infrastructure, ensuring operational uptime. Provided
-                            comprehensive technical support, resolving hardware, software, and system issues.
-                        </p>
-                    </div>
-                    <!-- Mobile Desc -->
-                    <div class="md:hidden pl-8 mt-4">
-                        <p class="text-gray-400 text-sm">Managed core IT infrastructure and provided technical support.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Job 2 -->
-                <div class="relative md:flex items-center justify-between group" data-aos="fade-up">
-                    <div
-                        class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-600 group-hover:bg-primary transition-colors ring-4 ring-darker">
-                    </div>
-
-                    <!-- Desktop: Right side content for timeline alignment need to swap logic for alternating layout if desired, keeping simple left-aligned for now but structured for split -->
-                    <!-- Actually sticking to a simpler left-border timeline for better responsiveness consistency -->
-                </div>
-
-                <!-- Refactored Timeline for Vertical Split Layout Style -->
-                <!-- Item 1 -->
-                <div class="mb-8 ml-6 transform transition-all hover:-translate-y-1" data-aos="fade-up">
-                    <span
-                        class="absolute flex items-center justify-center w-6 h-6 bg-card rounded-full -left-3 ring-4 ring-darker">
-                        <div class="w-2 h-2 bg-primary rounded-full"></div>
-                    </span>
-                    <div
-                        class="p-6 bg-card rounded-2xl border border-white/5 shadow-lg hover:border-primary/30 transition-colors">
-                        <div class="flex flex-col md:flex-row justify-between mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-white">Information Technology</h3>
-                                <p class="text-primary text-sm">Badan Kesatuan Bangsa dan Politik Kota Pekanbaru</p>
-                                <p class="text-gray-500 text-xs mt-1">Pekanbaru, Indonesia</p>
-                            </div>
-                            <span class="text-sm text-gray-500 mt-1 md:mt-0">2025 - Present</span>
-                        </div>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Managed the agency's core IT infrastructure, ensuring operational uptime. Provided
-                            comprehensive technical support, resolving all hardware, software, and system issues for
-                            staff.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="mb-8 ml-6 transform transition-all hover:-translate-y-1" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <span
-                        class="absolute flex items-center justify-center w-6 h-6 bg-card rounded-full -left-3 ring-4 ring-darker">
-                        <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
-                    </span>
-                    <div
-                        class="p-6 bg-card rounded-2xl border border-white/5 shadow-lg hover:border-primary/30 transition-colors">
-                        <div class="flex flex-col md:flex-row justify-between mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-white">Programmer</h3>
-                                <p class="text-primary text-sm">Matrixc</p>
-                                <p class="text-gray-500 text-xs mt-1">Kuala Lumpur, Malaysia</p>
-                            </div>
-                            <span class="text-sm text-gray-500 mt-1 md:mt-0">2021 - 2025</span>
-                        </div>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Contributed technically to the full-stack development of "Ruang Ilmu" and "RECQA." Involved
-                            in engineering end-to-end solutions, from robust back-end to user-centric UI/UX.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="mb-8 ml-6 transform transition-all hover:-translate-y-1" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <span
-                        class="absolute flex items-center justify-center w-6 h-6 bg-card rounded-full -left-3 ring-4 ring-darker">
-                        <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
-                    </span>
-                    <div
-                        class="p-6 bg-card rounded-2xl border border-white/5 shadow-lg hover:border-primary/30 transition-colors">
-                        <div class="flex flex-col md:flex-row justify-between mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-white">Programmer</h3>
-                                <p class="text-primary text-sm">Best Total Solution</p>
-                                <p class="text-gray-500 text-xs mt-1">Jakarta, Indonesia</p>
-                            </div>
-                            <span class="text-sm text-gray-500 mt-1 md:mt-0">2020 - 2021</span>
-                        </div>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Developed and maintained 'bestprint.id', an e-commerce platform for on-demand online
-                            printing. Engineered the full customer workflow from file upload to payment.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="mb-8 ml-6 transform transition-all hover:-translate-y-1" data-aos="fade-up"
-                    data-aos-delay="300">
-                    <span
-                        class="absolute flex items-center justify-center w-6 h-6 bg-card rounded-full -left-3 ring-4 ring-darker">
-                        <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
-                    </span>
-                    <div
-                        class="p-6 bg-card rounded-2xl border border-white/5 shadow-lg hover:border-primary/30 transition-colors">
-                        <div class="flex flex-col md:flex-row justify-between mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-white">Programmer</h3>
-                                <p class="text-primary text-sm">Garuda Cyber Indonesia</p>
-                                <p class="text-gray-500 text-xs mt-1">Pekanbaru, Indonesia</p>
-                            </div>
-                            <span class="text-sm text-gray-500 mt-1 md:mt-0">2019 - 2020</span>
-                        </div>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Core member of the development team for a 'Smart Campus' web application designed to
-                            digitize university operations.
-                        </p>
-                    </div>
-                </div>
-
+        <div class="relative border-l border-gray-700 ml-4 md:ml-1/2 space-y-12">
+          <!-- Job 1 -->
+          <div class="relative md:flex items-center justify-between group" data-aos="fade-up">
+            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-darker"></div>
+            <div class="md:w-1/2 pl-8 md:pl-0 md:pr-12 md:text-right">
+              <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Information Technology</h3>
+              <p class="text-gray-400 mt-1">Badan Kesatuan Bangsa dan Politik Kota Pekanbaru</p>
+              <!-- Mobile Date -->
+              <span class="md:hidden block text-sm text-primary mt-2">2025 - Present</span>
             </div>
+            <div class="hidden md:block md:w-1/2 pl-12">
+              <span class="inline-block px-4 py-1 bg-card rounded-full text-sm text-primary border border-white/5">2025 - Present</span>
+              <p class="text-gray-400 mt-4 leading-relaxed text-sm">
+                Managed the agency's core IT infrastructure, ensuring operational uptime. Provided comprehensive technical support, resolving hardware,
+                software, and system issues.
+              </p>
+            </div>
+            <!-- Mobile Desc -->
+            <div class="md:hidden pl-8 mt-4">
+              <p class="text-gray-400 text-sm">Managed core IT infrastructure and provided technical support.</p>
+            </div>
+          </div>
+
+          <!-- Job 2 -->
+          <div class="relative md:flex items-center justify-between group" data-aos="fade-up">
+            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-600 group-hover:bg-primary transition-colors ring-4 ring-darker"></div>
+
+            <!-- Desktop: Right side content for timeline alignment need to swap logic for alternating layout if desired, keeping simple left-aligned for now but structured for split -->
+            <!-- Actually sticking to a simpler left-border timeline for better responsiveness consistency -->
+          </div>
+
+          <!-- Refactored Timeline for Vertical Split Layout Style -->
+          <!-- Item 1 -->
+          <div class="mb-8 ml-6 transform transition-all hover:-translate-y-1" data-aos="fade-up">
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-card rounded-full -left-3 ring-4 ring-darker">
+              <div class="w-2 h-2 bg-primary rounded-full"></div>
+            </span>
+            <div class="p-6 bg-card rounded-2xl border border-white/5 shadow-lg hover:border-primary/30 transition-colors">
+              <div class="flex flex-col md:flex-row justify-between mb-4">
+                <div>
+                  <h3 class="text-xl font-bold text-white">Information Technology</h3>
+                  <p class="text-primary text-sm">Badan Kesatuan Bangsa dan Politik Kota Pekanbaru</p>
+                  <p class="text-gray-500 text-xs mt-1">Pekanbaru, Indonesia</p>
+                </div>
+                <span class="text-sm text-gray-500 mt-1 md:mt-0">2025 - Present</span>
+              </div>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Managed the agency's core IT infrastructure, ensuring operational uptime. Provided comprehensive technical support, resolving all hardware,
+                software, and system issues for staff.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="mb-8 ml-6 transform transition-all hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-card rounded-full -left-3 ring-4 ring-darker">
+              <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+            </span>
+            <div class="p-6 bg-card rounded-2xl border border-white/5 shadow-lg hover:border-primary/30 transition-colors">
+              <div class="flex flex-col md:flex-row justify-between mb-4">
+                <div>
+                  <h3 class="text-xl font-bold text-white">Programmer</h3>
+                  <p class="text-primary text-sm">Matrixc</p>
+                  <p class="text-gray-500 text-xs mt-1">Kuala Lumpur, Malaysia</p>
+                </div>
+                <span class="text-sm text-gray-500 mt-1 md:mt-0">2021 - 2025</span>
+              </div>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Contributed technically to the full-stack development of "Ruang Ilmu" and "RECQA." Involved in engineering end-to-end solutions, from robust
+                back-end to user-centric UI/UX.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="mb-8 ml-6 transform transition-all hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-card rounded-full -left-3 ring-4 ring-darker">
+              <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+            </span>
+            <div class="p-6 bg-card rounded-2xl border border-white/5 shadow-lg hover:border-primary/30 transition-colors">
+              <div class="flex flex-col md:flex-row justify-between mb-4">
+                <div>
+                  <h3 class="text-xl font-bold text-white">Programmer</h3>
+                  <p class="text-primary text-sm">Best Total Solution</p>
+                  <p class="text-gray-500 text-xs mt-1">Jakarta, Indonesia</p>
+                </div>
+                <span class="text-sm text-gray-500 mt-1 md:mt-0">2020 - 2021</span>
+              </div>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Developed and maintained 'bestprint.id', an e-commerce platform for on-demand online printing. Engineered the full customer workflow from file
+                upload to payment.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="mb-8 ml-6 transform transition-all hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-card rounded-full -left-3 ring-4 ring-darker">
+              <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+            </span>
+            <div class="p-6 bg-card rounded-2xl border border-white/5 shadow-lg hover:border-primary/30 transition-colors">
+              <div class="flex flex-col md:flex-row justify-between mb-4">
+                <div>
+                  <h3 class="text-xl font-bold text-white">Programmer</h3>
+                  <p class="text-primary text-sm">Garuda Cyber Indonesia</p>
+                  <p class="text-gray-500 text-xs mt-1">Pekanbaru, Indonesia</p>
+                </div>
+                <span class="text-sm text-gray-500 mt-1 md:mt-0">2019 - 2020</span>
+              </div>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Core member of the development team for a 'Smart Campus' web application designed to digitize university operations.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
     <section class="py-20 bg-darker relative" id="skills">
-        <!-- Floating shapes -->
-        <div class="absolute top-10 left-10 w-20 h-20 bg-primary/5 rounded-full blur-xl"></div>
-        <div class="absolute bottom-10 right-10 w-32 h-32 bg-primary/5 rounded-full blur-xl"></div>
+      <!-- Floating shapes -->
+      <div class="absolute top-10 left-10 w-20 h-20 bg-primary/5 rounded-full blur-xl"></div>
+      <div class="absolute bottom-10 right-10 w-32 h-32 bg-primary/5 rounded-full blur-xl"></div>
 
-        <div class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl">
-            <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-16 text-center" data-aos="fade-up">My
-                <span class="text-primary">Skills</span>
-            </h2>
+      <div class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-16 text-center" data-aos="fade-up">
+          My
+          <span class="text-primary">Skills</span>
+        </h2>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <!-- Skill Card -->
-                <div class="p-6 bg-card rounded-xl border border-white/5 hover:border-primary/50 transition-all duration-300 group text-center"
-                    data-aos="flip-left">
-                    <div
-                        class="w-12 h-12 mx-auto bg-gray-700/50 rounded-lg flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-dark transition-colors mb-4">
-                        🌐
-                    </div>
-                    <h3 class="text-white font-medium">Web Development</h3>
-                </div>
-                <div class="p-6 bg-card rounded-xl border border-white/5 hover:border-primary/50 transition-all duration-300 group text-center"
-                    data-aos="flip-left" data-aos-delay="100">
-                    <div
-                        class="w-12 h-12 mx-auto bg-gray-700/50 rounded-lg flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-dark transition-colors mb-4">
-                        🎨
-                    </div>
-                    <h3 class="text-white font-medium">Figma</h3>
-                </div>
-                <div class="p-6 bg-card rounded-xl border border-white/5 hover:border-primary/50 transition-all duration-300 group text-center"
-                    data-aos="flip-left" data-aos-delay="200">
-                    <div
-                        class="w-12 h-12 mx-auto bg-gray-700/50 rounded-lg flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-dark transition-colors mb-4">
-                        ☁️
-                    </div>
-                    <h3 class="text-white font-medium">Google Cloud</h3>
-                </div>
-                <a href="assets/projects/mta.pdf" target="_blank"
-                    class="p-6 bg-card rounded-xl border border-white/5 hover:border-primary/50 transition-all duration-300 group text-center block"
-                    data-aos="flip-left" data-aos-delay="300">
-                    <div
-                        class="w-12 h-12 mx-auto bg-gray-700/50 rounded-lg flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-dark transition-colors mb-4">
-                        📜
-                    </div>
-                    <h3 class="text-white font-medium">Certifications</h3>
-                    <p class="text-xs text-gray-500 mt-1">MTA Software Dev</p>
-                </a>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <!-- Skill Card -->
+          <div class="p-6 bg-card rounded-xl border border-white/5 hover:border-primary/50 transition-all duration-300 group text-center" data-aos="flip-left">
+            <div
+              class="w-12 h-12 mx-auto bg-gray-700/50 rounded-lg flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-dark transition-colors mb-4"
+            >
+              🌐
             </div>
+            <h3 class="text-white font-medium">Web Development</h3>
+          </div>
+          <div
+            class="p-6 bg-card rounded-xl border border-white/5 hover:border-primary/50 transition-all duration-300 group text-center"
+            data-aos="flip-left"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-12 h-12 mx-auto bg-gray-700/50 rounded-lg flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-dark transition-colors mb-4"
+            >
+              🎨
+            </div>
+            <h3 class="text-white font-medium">Figma</h3>
+          </div>
+          <div
+            class="p-6 bg-card rounded-xl border border-white/5 hover:border-primary/50 transition-all duration-300 group text-center"
+            data-aos="flip-left"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-12 h-12 mx-auto bg-gray-700/50 rounded-lg flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-dark transition-colors mb-4"
+            >
+              ☁️
+            </div>
+            <h3 class="text-white font-medium">Google Cloud</h3>
+          </div>
+          <a
+            href="assets/projects/mta.pdf"
+            target="_blank"
+            class="p-6 bg-card rounded-xl border border-white/5 hover:border-primary/50 transition-all duration-300 group text-center block"
+            data-aos="flip-left"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-12 h-12 mx-auto bg-gray-700/50 rounded-lg flex items-center justify-center text-2xl group-hover:bg-primary group-hover:text-dark transition-colors mb-4"
+            >
+              📜
+            </div>
+            <h3 class="text-white font-medium">Certifications</h3>
+            <p class="text-xs text-gray-500 mt-1">MTA Software Dev</p>
+          </a>
         </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
     <section class="py-20 bg-dark" id="projects">
-        <div class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl">
-            <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-16 text-center" data-aos="fade-up">My
-                <span class="text-primary">Portfolio</span>
-            </h2>
+      <div class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-16 text-center" data-aos="fade-up">
+          My
+          <span class="text-primary">Portfolio</span>
+        </h2>
 
-            <!-- Web Projects -->
-            <h3 class="text-2xl font-bold text-white mb-8 border-l-4 border-primary pl-4" data-aos="fade-right">Web
-                Development</h3>
-            <div class="grid md:grid-cols-2 gap-8 mb-16">
-                <!-- Web Project 1 -->
-                <div class="bg-card rounded-xl overflow-hidden shadow-lg border border-white/5 hover:border-primary/50 transition-all group"
-                    data-aos="fade-up" data-aos-delay="0">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="assets/projects/web-1.png" alt="Figma Design 1"
-                            class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
-                        <!-- <div
+        <!-- Web Projects -->
+        <h3 class="text-2xl font-bold text-white mb-8 border-l-4 border-primary pl-4" data-aos="fade-right">Web Development</h3>
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          <!-- Web Project 1 -->
+          <div
+            class="bg-card rounded-xl overflow-hidden shadow-lg border border-white/5 hover:border-primary/50 transition-all group"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="assets/projects/web-1.png"
+                alt="Figma Design 1"
+                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+              />
+              <!-- <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                             <span class="px-6 py-2 bg-primary text-darker rounded-full font-bold">View Project</span>
                         </div> -->
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-white mb-2">RECQA Multitenant</h4>
-                        <p class="text-gray-400 text-sm mb-4">
-                            RECQA Multitenant is a next-generation Knowledge Sharing Hub powered by a robust
-                            Service-Oriented Architecture (SOA) and Microservices. Engineered for superior scalability
-                            and strict data isolation, this platform delivers a secure and personalized multitenant
-                            experience, making it the ideal solution for sharing critical insights and knowledge across
-                            diverse business entities.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Angular JS</span>
-                            <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Nest JS</span>
-                            <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Google Cloud
-                                Platform</span>
-                            <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Microservices</span>
-                            <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Multitenant</span>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-white mb-2">RECQA Multitenant</h4>
+              <p class="text-gray-400 text-sm mb-4">
+                RECQA Multitenant is a next-generation Knowledge Sharing Hub powered by a robust Service-Oriented Architecture (SOA) and Microservices.
+                Engineered for superior scalability and strict data isolation, this platform delivers a secure and personalized multitenant experience, making
+                it the ideal solution for sharing critical insights and knowledge across diverse business entities.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Angular JS</span>
+                <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Nest JS</span>
+                <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Google Cloud Platform</span>
+                <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Microservices</span>
+                <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Multitenant</span>
+              </div>
+            </div>
+          </div>
 
-                <!-- Web Project 2 -->
-                <div class="bg-card rounded-xl overflow-hidden shadow-lg border border-white/5 hover:border-primary/50 transition-all group"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="assets/projects/web-2.png" alt="Figma Design 2"
-                            class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
-                        <!-- <div
+          <!-- Web Project 2 -->
+          <div
+            class="bg-card rounded-xl overflow-hidden shadow-lg border border-white/5 hover:border-primary/50 transition-all group"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="assets/projects/web-2.png"
+                alt="Figma Design 2"
+                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+              />
+              <!-- <div
                             class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                             <span class="px-6 py-2 bg-primary text-darker rounded-full font-bold">View Project</span>
                         </div> -->
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-white mb-2">Smart Campus STIE Riau</h4>
-                        <p class="text-gray-400 text-sm mb-4">
-                            Smart Campus STIE Riau: More than just an application, this is a fully integrated Complex
-                            Academic Management Ecosystem. With a sophisticated database structure managing hundreds of
-                            tables for every operational aspect of the campus from student grades to lecturer
-                            schedules this solution redefines academic efficiency, offering deep data control and
-                            unparalleled operational insights.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Codeigniter</span>
-                            <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">JQuery</span>
-                            <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Complex DB
-                                Structure</span>
-                            <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">HMVC</span>
-                            <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Virtual Private
-                                Server</span>
-                        </div>
-                    </div>
-                </div>
             </div>
-
-            <!-- Figma Projects -->
-            <h3 class="text-2xl font-bold text-white mb-8 border-l-4 border-primary pl-4" data-aos="fade-right">UI/UX
-                Design</h3>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Figma Project 1 -->
-                <div class="bg-card rounded-xl overflow-hidden shadow-lg border border-white/5 hover:border-primary/50 transition-all group"
-                    data-aos="fade-up" data-aos-delay="0">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="assets/projects/cover-kesbangpol.png" alt="Figma Design 1"
-                            class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="assets/projects/full-kesbangpol.png" target="_blank"
-                                class="px-6 py-2 bg-primary text-darker rounded-full font-bold hover:bg-yellow-300 transition-colors">View
-                                Design</a>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-white mb-2">Web Badan Kesatuan Bangsa dan Politik</h4>
-                        <p class="text-gray-400 text-sm">
-                            Designing the digital face of the National Unity and Political Agency of Pekanbaru City
-                            (Kesbangpol). This Web Profile design project emphasizes Clear Information Hierarchy and
-                            High Accessibility, ensuring every citizen can easily access vital data concerning national
-                            and political affairs. A prime example of public service oriented UI/UX design.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Figma Project 2 -->
-                <div class="bg-card rounded-xl overflow-hidden shadow-lg border border-white/5 hover:border-primary/50 transition-all group"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="assets/projects/cover-memmaz.png" alt="Figma Design 2"
-                            class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
-                        <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <a href="assets/projects/full-memmaz.png" target="_blank"
-                                class="px-6 py-2 bg-primary text-darker rounded-full font-bold hover:bg-yellow-300 transition-colors">View
-                                Design</a>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold text-white mb-2">Web Mem Maz</h4>
-                        <p class="text-gray-400 text-sm">
-                            Creating a premium Personal Learning Platform for Mem Maz. This design focuses on conversion
-                            and credibility, presenting the personal training and courses of an experienced coach in a
-                            professional and engaging layout. The User Experience is crafted to guide visitors
-                            seamlessly from the landing page to course enrollment, successfully boosting sales and
-                            mentor engagement.
-                        </p>
-                    </div>
-                </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-white mb-2">Smart Campus STIE Riau</h4>
+              <p class="text-gray-400 text-sm mb-4">
+                Smart Campus STIE Riau: More than just an application, this is a fully integrated Complex Academic Management Ecosystem. With a sophisticated
+                database structure managing hundreds of tables for every operational aspect of the campus from student grades to lecturer schedules this
+                solution redefines academic efficiency, offering deep data control and unparalleled operational insights.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Codeigniter</span>
+                <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">JQuery</span>
+                <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Complex DB Structure</span>
+                <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">HMVC</span>
+                <span class="px-3 py-1 bg-darker rounded-full text-xs text-primary">Virtual Private Server</span>
+              </div>
             </div>
-
+          </div>
         </div>
+
+        <!-- Figma Projects -->
+        <h3 class="text-2xl font-bold text-white mb-8 border-l-4 border-primary pl-4" data-aos="fade-right">UI/UX Design</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Figma Project 1 -->
+          <div
+            class="bg-card rounded-xl overflow-hidden shadow-lg border border-white/5 hover:border-primary/50 transition-all group"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="assets/projects/cover-kesbangpol.png"
+                alt="Figma Design 1"
+                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a
+                  href="assets/projects/full-kesbangpol.png"
+                  target="_blank"
+                  class="px-6 py-2 bg-primary text-darker rounded-full font-bold hover:bg-yellow-300 transition-colors"
+                  >View Design</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-white mb-2">Web Badan Kesatuan Bangsa dan Politik</h4>
+              <p class="text-gray-400 text-sm">
+                Designing the digital face of the National Unity and Political Agency of Pekanbaru City (Kesbangpol). This Web Profile design project emphasizes
+                Clear Information Hierarchy and High Accessibility, ensuring every citizen can easily access vital data concerning national and political
+                affairs. A prime example of public service oriented UI/UX design.
+              </p>
+            </div>
+          </div>
+
+          <!-- Figma Project 2 -->
+          <div
+            class="bg-card rounded-xl overflow-hidden shadow-lg border border-white/5 hover:border-primary/50 transition-all group"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="assets/projects/cover-memmaz.png"
+                alt="Figma Design 2"
+                class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <a
+                  href="assets/projects/full-memmaz.png"
+                  target="_blank"
+                  class="px-6 py-2 bg-primary text-darker rounded-full font-bold hover:bg-yellow-300 transition-colors"
+                  >View Design</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-white mb-2">Web Mem Maz</h4>
+              <p class="text-gray-400 text-sm">
+                Creating a premium Personal Learning Platform for Mem Maz. This design focuses on conversion and credibility, presenting the personal training
+                and courses of an experienced coach in a professional and engaging layout. The User Experience is crafted to guide visitors seamlessly from the
+                landing page to course enrollment, successfully boosting sales and mentor engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Education & Contact Footer -->
     <section class="py-20 bg-dark border-t border-white/5" id="contact">
-        <div class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl">
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Education -->
-                <div data-aos="fade-right">
-                    <h2 class="text-2xl font-display font-bold text-white mb-8">Education</h2>
-                    <div class="flex items-start">
-                        <div class="text-primary text-4xl mr-4">🎓</div>
-                        <div>
-                            <h3 class="text-xl font-bold text-white">UIN SUSKA Riau</h3>
-                            <p class="text-gray-400">Bachelor's degree, Information Technology</p>
-                            <p class="text-sm text-primary mt-1">2014 - 2019</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact -->
-                <div data-aos="fade-left">
-                    <h2 class="text-2xl font-display font-bold text-white mb-8">Contact Me</h2>
-                    <p class="text-gray-400 mb-6">Currently available for freelance projects or full-time opportunities.
-                    </p>
-
-                    <div class="space-y-4">
-                        <a href="mailto:arif.56.budiman@gmail.com"
-                            class="flex items-center p-4 bg-card rounded-lg hover:bg-gray-700 transition-colors group">
-                            <div
-                                class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-darker transition-colors mr-4">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <span class="text-white">arif.56.budiman@gmail.com</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/arifcom" target="_blank"
-                            class="flex items-center p-4 bg-card rounded-lg hover:bg-gray-700 transition-colors group">
-                            <div
-                                class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-darker transition-colors mr-4">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                </svg>
-                            </div>
-                            <span class="text-white">linkedin.com/in/arifcom</span>
-                        </a>
-                    </div>
-                </div>
+      <div class="container mx-auto px-8 md:px-24 lg:px-32 max-w-7xl">
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Education -->
+          <div data-aos="fade-right">
+            <h2 class="text-2xl font-display font-bold text-white mb-8">Education</h2>
+            <div class="flex items-start">
+              <div class="text-primary text-4xl mr-4">🎓</div>
+              <div>
+                <h3 class="text-xl font-bold text-white">UIN SUSKA Riau</h3>
+                <p class="text-gray-400">Bachelor's degree, Information Technology</p>
+                <p class="text-sm text-primary mt-1">2014 - 2019</p>
+              </div>
             </div>
+          </div>
 
-            <div class="border-t border-white/5 mt-16 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2025 Arif Budiman. Crafted with Tailwind CSS.</p>
+          <!-- Contact -->
+          <div data-aos="fade-left">
+            <h2 class="text-2xl font-display font-bold text-white mb-8">Contact Me</h2>
+            <p class="text-gray-400 mb-6">Currently available for freelance projects or full-time opportunities.</p>
+
+            <div class="space-y-4">
+              <a href="mailto:arif.56.budiman@gmail.com" class="flex items-center p-4 bg-card rounded-lg hover:bg-gray-700 transition-colors group">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-darker transition-colors mr-4"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-white">arif.56.budiman@gmail.com</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/arifcom"
+                target="_blank"
+                class="flex items-center p-4 bg-card rounded-lg hover:bg-gray-700 transition-colors group"
+              >
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-darker transition-colors mr-4"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-white">linkedin.com/in/arifcom</span>
+              </a>
             </div>
+          </div>
         </div>
+
+        <div class="border-t border-white/5 mt-16 pt-8 text-center text-gray-500 text-sm">
+          <p>&copy; 2025 Arif Budiman. Crafted with Tailwind CSS.</p>
+        </div>
+      </div>
     </section>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            once: true,
-            offset: 50,
-            duration: 800,
-        });
+      AOS.init({
+        once: true,
+        offset: 50,
+        duration: 800,
+      });
     </script>
-</body>
-
+  </body>
 </html>
